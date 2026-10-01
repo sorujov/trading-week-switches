@@ -1,0 +1,256 @@
+{
+ "zero_share": {
+  "KSA|0|N": 0.288,
+  "KSA|0|W": 0.206,
+  "KSA|0|Z": 0.331,
+  "KSA|1|N": 0.276,
+  "KSA|1|W": 0.222,
+  "KSA|1|Z": 0.305,
+  "TASE_domestic|0|N": 0.504,
+  "TASE_domestic|0|W": 0.475,
+  "TASE_domestic|0|Z": 0.528,
+  "TASE_domestic|1|N": 0.48,
+  "TASE_domestic|1|W": 0.405,
+  "TASE_dual|0|N": 0.276,
+  "TASE_dual|0|W": 0.225,
+  "TASE_dual|0|Z": 0.371,
+  "TASE_dual|1|N": 0.254,
+  "TASE_dual|1|W": 0.195,
+  "UAE|0|N": 0.26,
+  "UAE|0|W": 0.219,
+  "UAE|0|Z": 0.27,
+  "UAE|1|N": 0.321,
+  "UAE|1|W": 0.31,
+  "UAE|1|Z": 0.326
+ },
+ "scales": {
+  "mean": {
+   "per_market": {
+    "UAE": {
+     "est": -0.071,
+     "se": 0.133
+    },
+    "KSA": {
+     "est": -0.053,
+     "se": 0.223
+    },
+    "TASE_domestic": {
+     "est": 0.012,
+     "se": 0.241
+    },
+    "TASE_dual": {
+     "est": -0.133,
+     "se": 0.196
+    }
+   },
+   "meta": {
+    "fixed": -0.0691,
+    "fixed_se": 0.0914,
+    "Q": 0.2253,
+    "Q_p": 0.9734,
+    "I2": 0.0,
+    "tau2": 0.0,
+    "random": -0.0691,
+    "random_se": 0.0914
+   },
+   "R_Z": {
+    "UAE|0": 1.18,
+    "UAE|1": 0.703,
+    "KSA|0": 0.718,
+    "KSA|1": 0.742,
+    "TASE_domestic|0": 1.08,
+    "TASE_dual|0": 0.527
+   }
+  },
+  "abs_keep_zeros": {
+   "per_market": {
+    "UAE": {
+     "est": -0.121,
+     "se": 0.095
+    },
+    "KSA": {
+     "est": -0.205,
+     "se": 0.175
+    },
+    "TASE_domestic": {
+     "est": -0.023,
+     "se": 0.259
+    },
+    "TASE_dual": {
+     "est": -0.312,
+     "se": 0.198
+    }
+   },
+   "meta": {
+    "fixed": -0.1549,
+    "fixed_se": 0.0738,
+    "Q": 1.0989,
+    "Q_p": 0.7773,
+    "I2": 0.0,
+    "tau2": 0.0,
+    "random": -0.1549,
+    "random_se": 0.0738
+   },
+   "R_Z": {
+    "UAE|0": 1.016,
+    "UAE|1": 0.828,
+    "KSA|0": 0.712,
+    "KSA|1": 0.759,
+    "TASE_domestic|0": 0.979,
+    "TASE_dual|0": 0.375
+   }
+  },
+  "log_nonzero": {
+   "per_market": {
+    "UAE": {
+     "est": -0.036,
+     "se": 0.059
+    },
+    "KSA": {
+     "est": -0.223,
+     "se": 0.113
+    },
+    "TASE_domestic": {
+     "est": -0.292,
+     "se": 0.191
+    },
+    "TASE_dual": {
+     "est": -0.569,
+     "se": 0.188
+    }
+   },
+   "meta": {
+    "fixed": -0.1227,
+    "fixed_se": 0.0484,
+    "Q": 9.4043,
+    "Q_p": 0.0244,
+    "I2": 0.681,
+    "tau2": 0.0307,
+    "random": -0.2328,
+    "random_se": 0.1102
+   },
+   "R_Z": {
+    "UAE|0": 0.98,
+    "UAE|1": 0.937,
+    "KSA|0": 0.843,
+    "KSA|1": 0.861,
+    "TASE_domestic|0": 0.955,
+    "TASE_dual|0": 0.434
+   }
+  }
+ },
+ "n_nonzero": {
+  "KSA|0|N": 7904,
+  "KSA|0|W": 4455,
+  "KSA|0|Z": 8198,
+  "KSA|1|N": 12227,
+  "KSA|1|W": 4387,
+  "KSA|1|Z": 4470,
+  "TASE_domestic|0|N": 42322,
+  "TASE_domestic|0|W": 14593,
+  "TASE_domestic|0|Z": 13481,
+  "TASE_domestic|1|N": 7553,
+  "TASE_domestic|1|W": 2227,
+  "TASE_dual|0|N": 8877,
+  "TASE_dual|0|W": 3092,
+  "TASE_dual|0|Z": 2585,
+  "TASE_dual|1|N": 1548,
+  "TASE_dual|1|W": 430,
+  "UAE|0|N": 15489,
+  "UAE|0|W": 5291,
+  "UAE|0|Z": 5799,
+  "UAE|1|N": 28279,
+  "UAE|1|W": 7191,
+  "UAE|1|Z": 1157
+ },
+ "tail_frequency": {
+  "UAE": {
+   "freq": {
+    "0|N": 0.0086,
+    "0|W": 0.0143,
+    "1|N": 0.0058,
+    "1|W": 0.0075
+   },
+   "DeltaW_log": -0.26,
+   "se": 0.306
+  },
+  "KSA": {
+   "freq": {
+    "0|N": 0.0065,
+    "0|W": 0.0171,
+    "1|N": 0.0048,
+    "1|W": 0.0147
+   },
+   "DeltaW_log": 0.151,
+   "se": 0.464
+  },
+  "TASE_domestic": {
+   "freq": {
+    "0|N": 0.0074,
+    "0|W": 0.0181,
+    "1|N": 0.0034,
+    "1|W": 0.0118
+   },
+   "DeltaW_log": 0.333,
+   "se": 0.434
+  },
+  "TASE_dual": {
+   "freq": {
+    "0|N": 0.0053,
+    "0|W": 0.0245,
+    "1|N": 0.0019,
+    "1|W": 0.0075
+   },
+   "DeltaW_log": -0.176,
+   "se": 0.682
+  }
+ },
+ "median_bootstrap": {
+  "UAE": {
+   "est": -0.08,
+   "se": 0.06,
+   "ci": [
+    -0.209,
+    0.04
+   ],
+   "B": 299
+  },
+  "KSA": {
+   "est": -0.337,
+   "se": 0.106,
+   "ci": [
+    -0.508,
+    -0.099
+   ],
+   "B": 299
+  },
+  "TASE_domestic": {
+   "est": -0.379,
+   "se": 0.217,
+   "ci": [
+    -0.706,
+    0.088
+   ],
+   "B": 299
+  },
+  "TASE_dual": {
+   "est": -0.532,
+   "se": 0.157,
+   "ci": [
+    -0.854,
+    -0.258
+   ],
+   "B": 299
+  }
+ },
+ "median_meta": {
+  "fixed": -0.191,
+  "fixed_se": 0.0483,
+  "Q": 10.7877,
+  "Q_p": 0.0129,
+  "I2": 0.7219,
+  "tau2": 0.0346,
+  "random": -0.2991,
+  "random_se": 0.1139
+ }
+}

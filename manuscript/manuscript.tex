@@ -1,0 +1,39 @@
+\documentclass[preprint,12pt]{elsarticle}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,threeparttable,graphicx}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{setspace}
+\usepackage{placeins}
+\doublespacing
+\newcommand{\E}{\mathbb{E}}
+\makeatletter\let\tabinput\@@input\makeatother
+\biboptions{numbers,sort&compress}
+\journal{Journal of International Financial Markets, Institutions \& Money}
+
+\begin{document}
+\begin{frontmatter}
+\title{Calendar time, foreign trading and the weekend: evidence from three changes of the trading week}
+
+\begin{abstract}
+Three exchanges moved their trading week---Tadawul in 2013, Dubai and Abu Dhabi in 2022, Tel Aviv in 2026---keeping the weekend closure at 64--70 hours but taking one US trading session out of it. We use these changes, and weeknights on which the US market is closed, to ask whether return variance over a closure accrues in calendar time or with trading abroad. Calendar time is rejected everywhere: a weekend carries 1.2--2.5 weeknights of variance, not 3.4--4.1. A weeknight without a US session carries about 30 per cent less variance for Gulf shares and half as much for Israeli shares listed in New York. At the weekend, the pre-specified test cannot separate the trading-time prediction from no change. Exploratory measures suggest that the weekend lost variance where only its foreign content changed, and elsewhere the information moved into the first session after the weekend. Gulf index openings in a leading database are largely stale.
+\end{abstract}
+
+\begin{keyword}
+Weekend effect \sep Non-trading periods \sep Information arrival \sep Dual listing \sep Trading calendar \sep Gulf stock markets
+\\[4pt] \textit{JEL classification:} G14 \sep G15 \sep C22
+\end{keyword}
+\end{frontmatter}
+
+\input{body.tex}
+\input{appendix.tex}
+
+\section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
+During the preparation of this work the author(s) used Claude (Anthropic) for literature search, for writing data-retrieval and estimation code, and for drafting text. After using this tool, the author(s) reviewed and edited the content, checked every result against the code output and every reference against its source, and take(s) full responsibility for the content of the published article.
+
+\section*{Data availability}
+The Tel Aviv price data are the official end-of-day records of the Tel Aviv Stock Exchange, retrieved from the exchange's website; they, the code that reproduces every table and figure, and the pre-analysis plans with their hashes are supplied as supplementary material and will be deposited in a public repository (Mendeley Data), with a citable DOI, on acceptance. The Gulf share prices are licensed from LSEG Workspace and cannot be redistributed; the retrieval scripts and the cell-level statistics from which every Gulf table is built are included instead. NYSE session dates and the vendor series examined in the appendix are from Yahoo Finance and can be downloaded freely.
+
+\bibliographystyle{elsarticle-num-names}
+\bibliography{refs}
+\end{document}

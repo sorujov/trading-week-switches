@@ -1,0 +1,192 @@
+\appendix
+\section{Tel Aviv: data, index-level test and dual-listed firms}\label{app:tase}
+
+\emph{Data.} Index data are the official end-of-day records of the TA-125 and TA-35 (base, opening, closing, high and low values) from January 2005, and share data the official records of the 126 constituents of the TA-125 as of 23 September 2026 (one company is represented by two share lines) from January 2020: base price, opening price, closing price and a flag for whether the share traded. All were retrieved from the historical-data service of the TASE website. The exchange flags sixteen constituents as dual-listed; one has no data before the switch and two acquired their foreign listing during the sample. The gap return of share $i$ is $g_{it}=\log(O_{it}/B_{it})$, where $B$ is the base price; share-gaps without trade and the few with $|g|>0.25$ are dropped, and the sample starts on 8 March 2020, from which date Sunday hours were constant. For many smaller shares the recorded opening price equals the base price because the opening auction produced no trade, so that about half of domestic share-gaps and a quarter of dual-listed ones are exactly zero; conditional on a non-zero gap, the Sunday-night ratios are 0.61 (dual-listed) and 1.14 (domestic).
+
+\emph{Index-level test.} The Israeli plan \citep{PAP1} specified as its primary test the change in the index-level weekend ratio, with a stationary bootstrap over calendar weeks \citep{PolitisRomano1994}. For the TA-125 the ratio is 3.03 before the switch and 2.91 after; the log change is $-0.04$ with a bootstrap standard error of 0.45 (Table~\ref{tab:p1}). With 34 post-switch weekends, a log change of about 1.27 would be needed for detection with probability 0.8. In the old calendar, $\log R_W$ computed over consecutive blocks of 34 weekends has a standard deviation of 0.54 across blocks, and the difference between consecutive blocks a standard deviation of 0.92. The index-level test is therefore uninformative, which is why the share-level analysis carries the Israeli evidence. After the switch the Monday session of the index has a mean squared intraday return of $1.69\times10^{-4}$, against $0.79$--$1.19\times10^{-4}$ for Tuesday to Thursday; under the old calendar the first session after the weekend, Sunday, had $0.74\times10^{-4}$.
+
+\begin{table}[h]
+\centering
+\begin{threeparttable}
+\caption{Pre-specified index-level test (TA-125)}\label{tab:p1}
+\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+ & $R_{pre}$ & $R_{post}$ & $\Delta\log R$ & (s.e.) & $p$ & $\hat\delta$ & (s.e.) & $n_W^{post}$\\
+\midrule
+\tabinput ../output/tables/tab2_p1.tex
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item $\Delta\log R$ with standard error and two-sided $p$-value from a stationary bootstrap over calendar weeks (9,999 draws). $\hat\delta$: coefficient on weekend $\times$ post in a regression of $z^2$ on closure-type indicators, with Newey--West standard errors (10 lags) \citep{NeweyWest1987}. The last row applies the test to residuals from regressions of the gap on US returns inside it.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\emph{Dual-listed and domestic shares.} Table~\ref{tab:stocks} gives the ratios and the regressions of the Israeli addendum. In the pooled regression the Sunday-night $\times$ dual-listing interaction is $-0.30$, with a standard error of 0.09 when clustered by week and firm; in the $\log|z|$ regression with firm effects it is $-0.39$ (0.03). Reassigning the dual-listed label to 15 of the 125 constituents with pre-switch data, chosen at random 4,999 times, never produces a Sunday-night contrast as large as the observed one (observed difference in log ratios $-0.72$; first percentile of the randomisation distribution $-0.40$). The pre-specified triple difference for the weekend, the change in $\log R_W$ of dual-listed firms minus that of domestic ones, is $-0.14$ with a bootstrap standard error of 0.24. By firm (Table~\ref{tab:dlfirms}), eleven of the fifteen dual-listed firms with pre-switch data have a Sunday-night ratio below one; of the four exceptions, two acquired their US listing during the sample, one trades thinly in Tel Aviv, and one trades in London, whose session ends at 18:30 Israel time.
+
+\begin{table}[h]
+\centering
+\begin{threeparttable}
+\caption{Tel Aviv: gap variance ratios by listing status}\label{tab:stocks}
+\footnotesize
+\begin{tabular}{lcccccr}
+\toprule
+ & \multicolumn{3}{c}{Before the switch} & \multicolumn{2}{c}{After the switch} & \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}
+ & $\E[z^2\mid N]$ & $R_Z$ & $R_W$ & $\E[z^2\mid N]$ & $R_W$ & share-gaps \\
+\midrule
+\tabinput ../output/tables/tab5_stocks.tex
+\bottomrule
+\end{tabular}
+\vspace{4pt}
+
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{$z^2$} & \multicolumn{2}{c}{$\log|z|$, firm effects} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & coef. & (s.e.) & coef. & (s.e.)\\
+\midrule
+\tabinput ../output/tables/tab6_stockreg.tex
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item Upper panel: ratios of mean $z^2$ to that of weeknights in the same group and period; the Z closure is the Sunday night. Lower panel: pooled regressions on share-gaps, standard errors clustered by calendar week (two-way clustered standard errors in the text). The $\log|z|$ columns exclude zero gaps.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{threeparttable}
+\caption{Tel Aviv: dual-listed firms}\label{tab:dlfirms}
+\footnotesize
+\begin{tabular}{lccccc}
+\toprule
+ & $R_Z$ & $R_W$ before & $R_W$ after & share non-zero & foreign prices from \\
+\midrule
+\tabinput ../output/tables/tab10_dlfirms.tex
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item Ratios of mean $z^2$ to that of weeknights for the same firm and period. One firm with no pre-switch TASE data is omitted.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\FloatBarrier
+\section{Gulf index openings}\label{app:index}
+The share of sessions on which the index open recorded by the vendor equals the previous close to six digits is, for the Tadawul All Share Index, 0.99--1.00 in every year from 2007 to 2020, 0.14 in 2021 and zero thereafter; for the DFM General Index, between 0.22 and 0.40 in every year from 2007 to 2026; for the FTSE ADX General Index, between 0.06 and 0.40 until 2021 and between 0.93 and 1.00 from 2022. For the TA-125 it is zero or below 0.005 in every year after 2007, but the vendor's TA-125 openings differ from the exchange's official opening values by more than 0.01 per cent on up to 21 per cent of sessions a year. Gulf gap returns computed from index openings are not used.
+
+\FloatBarrier
+\section{Session hours}\label{app:hours}
+\begin{table}[h]
+\centering
+\begin{threeparttable}
+\caption{Trading days and continuous-session hours (local time)}\label{tab:hours}
+\footnotesize
+\begin{tabular}{llll}
+\toprule
+Market & Period & Days & Hours \\
+\midrule
+Tadawul & to 26 Jun 2013 & Sat--Wed & 11:00--15:30 \\
+ & 30 Jun 2013 -- 31 Mar 2016 & Sun--Thu & 11:00--15:30 \\
+ & from 3 Apr 2016 & Sun--Thu & 10:00--15:00 \\
+DFM, ADX & to 30 Dec 2021 & Sun--Thu & 10:00--14:00 \\
+ & from 3 Jan 2022 & Mon--Fri & 10:00--15:00 \\
+TASE & 8 Mar 2020 -- 1 Jan 2026 & Sun--Thu & 10:00--17:25 (Sun to 15:50) \\
+ & from 5 Jan 2026 & Mon--Fri & 10:00--17:25 (Fri to 13:45) \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item Sources: \citet{Alsayari2022}, \citet{Mubasher2016}, \citet{National2021}, \citet{TASE2025}, \citet{WFE2020}. Ramadan sessions are shorter. The code uses 11:00--15:30 for Tadawul throughout; the April 2016 change alters calendar hours by at most half an hour per closure and does not change $U$, since the NYSE opens after every Gulf close. NYSE regular sessions: 9:30--16:00 New York time (13:00 on early-close days).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\FloatBarrier
+\section{Other scales, the bound and the pooled model}\label{app:scales}
+Table~\ref{tab:scales} reports weeknight and weekend ratios on three scales that down-weight the largest gaps: the mean of $|z|$ on all gaps, the mean of $\log|z|$ on non-zero gaps and the median (the plan's secondary statistic, with a cluster bootstrap over calendar weeks, 999 draws), together with the frequency of very large gaps. The weeknight contrasts keep their ordering on every scale. At the weekend the median and log scales show larger falls than the $|z|$ scale for domestic Israeli shares, where the share of zero gaps changed at the switch; their estimates are heterogeneous across markets ($I^2$ of about 0.7), and we do not combine them.
+
+Table~\ref{tab:bound} converts the mean-scale results into contributions of one US session, in weeknight units: on weeknights $\delta=1-R_Z$, and at the weekend $\delta_W=R_W^{\,before}(1-e^{\Delta\log R_W})/\Delta U$, where $\Delta U$ is the number of US sessions the weekend lost. Combined, $\delta_W=0.11$ with a standard error of 0.15. Table~\ref{tab:pooled} reports the pooled model of the plan, $\E[z^2]=a_m+bU+c\,\mathbf 1\{\text{weekend}\}$, in the pre-specified $z^2$ units ($b=0.069$, standard error 0.033, one-sided $p=0.017$; $c=0.21$, 0.05) and in weeknight units. Its coefficient $b$ is identified mainly by the weeknight contrasts and adds little independent evidence about weekends.
+
+\begin{table}[h]
+\centering
+\begin{threeparttable}
+\caption{The contribution of a US session: weeknights and weekends}\label{tab:bound}
+\footnotesize
+\begin{tabular}{lccccc}
+\toprule
+ & \multicolumn{2}{c}{Weeknight, $\delta=1-R_Z$} & & \multicolumn{2}{c}{Weekend, $\delta_W$} \\
+\cmidrule(lr){2-3}\cmidrule(lr){5-6}
+ & est. & (s.e.) & $\Delta U$ & est. & (s.e.) \\
+\midrule
+\tabinput ../output/tables/t_bound.tex
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item Weeknight: one minus the ratio of Z to N variance (UAE after the switch, the other markets before it). Weekend: $\delta_W=R_W^{\,before}(1-e^{\Delta\log R_W})/\Delta U$, the weekend variance per US session implied by the change at the switch, where $\Delta U$ is the number of US sessions the weekend lost. Both in units of an ordinary weeknight's variance; delta-method standard errors, conditional on $R_W^{\,before}$. The combination weights by inverse variance and uses the joint covariance of the four switch estimates. Exploratory (Addendum B1).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\begin{table}[h]
+\centering
+\begin{threeparttable}
+\caption{Pooled model: the contribution of a US session and of the weekend}\label{tab:pooled}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccccr}
+\toprule
+ & $b$ & (s.e.) & $c$ & (s.e.) & share-gaps \\
+\midrule
+\tabinput ../output/tables/t_pooled.tex
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item OLS of the pooled model: market intercepts, the number of US sessions in the closure ($b$) and a weekend indicator ($c$). All rows but the last pool Saudi, Dubai, Abu Dhabi, domestic and dual-listed Israeli shares as five markets. In weeknight units the dependent variable is $z^2$ divided by the mean $z^2$ of ordinary weeknights of the same market and calendar, treated as known. Standard errors clustered by calendar week and firm. The first row is the pre-specified specification (one-sided $p=0.017$ for $b>0$).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\begin{table}[h]
+\centering
+\begin{threeparttable}
+\caption{Weeknight and weekend ratios on scales that down-weight the tail}\label{tab:scales}
+\scriptsize\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lccccccccccccc}
+\toprule
+ & \multicolumn{7}{c}{Mean $|z|$, zero gaps kept} & \multicolumn{2}{c}{Log $|z|$} & \multicolumn{2}{c}{Median} & \multicolumn{2}{c}{Tail freq.} \\
+\cmidrule(lr){2-8}\cmidrule(lr){9-10}\cmidrule(lr){11-12}\cmidrule(lr){13-14}
+ & $R_Z^b$ & $R_W^b$ & $R_Z^a$ & $R_W^a$ & $\Delta\log R_W$ & (s.e.) & pred. & $\Delta$ & (s.e.) & $\Delta$ & (s.e.) & $\Delta$ & (s.e.) \\
+\midrule
+\tabinput ../output/tables/t_scales.tex
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item TA: Tel Aviv. Superscripts $b$, $a$: before and after the switch. Mean $|z|$: $R_k=(\E|z|_k/\E|z|_N)^2$ on all gaps; ``pred.'' is the change in $\log R_W$ implied if a US session contributed to the weekend what it contributes to a weeknight on this scale, $\log\{1-(1-R_Z)\Delta U/R_W^b\}$, with $R_Z$ from the calendar that has a clean contrast (UAE after the switch, the others before). Log $|z|$: $2\,\Delta(\E\log|z|)$ on non-zero gaps. Median: squared ratio of median $|z|$ on non-zero gaps (plan 02, secondary), cluster bootstrap over calendar weeks (999 draws). Tail frequency: change in the log ratio of weekend to weeknight frequencies of gaps with $z^2$ above the market's pre-switch 99th percentile. Other standard errors clustered by calendar week and firm, from one stacked regression per scale. The $|z|$ scale uses all share-gaps (counts in Table~\ref{tab:ratios} and \ref{app:tase}; from 534 for dual-listed Israeli weekends after the switch to 85,288); the log and median scales use non-zero gaps, from 430 to 42,322 per cell. Exploratory except the median point estimates.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+
+\FloatBarrier
+\section{Missing sessions in free daily data}\label{app:vendor}
+The daily TA-125 series distributed by Yahoo Finance contains no row for any Sunday before 2026. Its Monday return therefore runs from Thursday's close to Monday's close and spans two sessions and a weekend. For 2019--2025 the official Sunday return has a variance of 1.82 (per cent squared) and the official Monday return 1.14; the Yahoo ``Monday'' return has a variance of 2.76, 2.4 times the official Monday variance and 2.8 times the Tuesday variance (Table~\ref{tab:vendor}). The series has other problems: from 2021 to 2025 between 9 and 40 Yahoo rows a year match no official close within three days, and for 2005--2013 it records about fifty spurious Friday rows a year, which are Sunday sessions dated a day late. For Emaar Properties, one of the largest Dubai-listed shares, the same source has, since 3 January 2022, between 243 and 245 rows for each of Monday to Thursday, none for Friday and three for Sunday, although the exchange has traded from Monday to Friday since that date.
+
+\begin{table}[h]
+\centering
+\begin{threeparttable}
+\caption{Daily TA-125 returns by weekday: official record against Yahoo Finance, 2019--2025}\label{tab:vendor}
+\footnotesize
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{Official TASE record} & \multicolumn{2}{c}{Yahoo Finance \texttt{\^{}TA125.TA}} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & sessions & variance & rows & variance \\
+\midrule
+\tabinput ../output/tables/tab7_vendor.tex
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item Variance of close-to-close log returns in per cent squared, by the weekday of the later session.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,91 @@
+{
+ "mean_scale": {
+  "UAE": {
+   "W_post0": 1.17,
+   "Z_post0": 1.124,
+   "W_post1": 1.144,
+   "Z_post1": 0.921,
+   "DeltaW": {
+    "est": -0.023,
+    "se": 0.104
+   }
+  },
+  "KSA": {
+   "W_post0": 1.745,
+   "Z_post0": 0.839,
+   "W_post1": 1.256,
+   "Z_post1": 0.966,
+   "DeltaW": {
+    "est": -0.329,
+    "se": 0.176
+   }
+  },
+  "TASE_domestic": {
+   "W_post0": 1.188,
+   "Z_post0": 1.068,
+   "W_post1": 1.42,
+   "DeltaW": {
+    "est": 0.179,
+    "se": 0.199
+   }
+  },
+  "TASE_dual": {
+   "W_post0": 1.063,
+   "Z_post0": 0.803,
+   "W_post1": 1.175,
+   "DeltaW": {
+    "est": 0.1,
+    "se": 0.131
+   }
+  },
+  "combined": {
+   "est": -0.011,
+   "se": 0.073
+  }
+ },
+ "abs_scale": {
+  "UAE": {
+   "W_post0": 1.154,
+   "Z_post0": 1.122,
+   "W_post1": 1.152,
+   "Z_post1": 0.923,
+   "DeltaW": {
+    "est": -0.001,
+    "se": 0.078
+   }
+  },
+  "KSA": {
+   "W_post0": 1.756,
+   "Z_post0": 0.864,
+   "W_post1": 1.342,
+   "Z_post1": 1.001,
+   "DeltaW": {
+    "est": -0.269,
+    "se": 0.143
+   }
+  },
+  "TASE_domestic": {
+   "W_post0": 1.15,
+   "Z_post0": 1.02,
+   "W_post1": 1.409,
+   "DeltaW": {
+    "est": 0.203,
+    "se": 0.168
+   }
+  },
+  "TASE_dual": {
+   "W_post0": 1.138,
+   "Z_post0": 0.766,
+   "W_post1": 1.295,
+   "DeltaW": {
+    "est": 0.13,
+    "se": 0.113
+   }
+  },
+  "combined": {
+   "est": 0.012,
+   "se": 0.059
+  }
+ },
+ "n": 330220
+}

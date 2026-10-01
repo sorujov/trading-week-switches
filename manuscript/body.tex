@@ -1,0 +1,194 @@
+\section{Introduction}
+
+A return from Friday's close to Monday's close covers seventy-two hours of calendar time and one trading day. If information arrived at a constant rate in calendar time, its variance would be about three times that of a return over one weeknight; if it arrived only while the market traded, the two would be equal. \citet{FrenchRoll1986} found that for the NYSE the weekend lies much closer to the second value, and attributed the difference to information that trading itself produces. \citet{Barclay1990} reached the same conclusion from the Tokyo exchange's Saturday sessions: when Saturday trading stopped, Saturday's variance did not move to the surrounding days.
+
+For a market outside the United States the question has a second part. Much of what moves a domestic price overnight may be the trading of other markets---of the same shares listed abroad, of benchmarks, of commodities---while the domestic market is shut. Calendar hours and hours of foreign trading, however, move together: every closure that is longer in calendar time also contains more trading elsewhere. What is needed is a change that alters the foreign trading inside a closure while leaving its calendar length fixed.
+
+Three exchanges have made such a change. Tadawul, the Saudi exchange, moved from a Saturday--Wednesday to a Sunday--Thursday week on 30 June 2013; the Dubai Financial Market and the Abu Dhabi Securities Exchange moved from Sunday--Thursday to Monday--Friday on 3 January 2022; and the Tel Aviv Stock Exchange (TASE) made the same move on 5 January 2026. In each case the weekend closure kept its length, between 64 and 70 hours, but lost one US trading session: the Saudi weekend had contained the US Wednesday, Thursday and Friday sessions and now contains two; the UAE and Israeli weekends had contained two and now contain one. Each calendar also contains weeknight closures of ordinary length during which the US cash market does not trade---Saturday and Sunday nights in Saudi Arabia, Sunday nights in the UAE and Israel before their switches, and weeknights that fall on US holidays. All three markets close before New York opens, so every US session lies wholly inside a closure.
+
+We use this variation to measure what the variance of a closure depends on. The unit of measurement is the variance of the gap between a close and the next open, normalised by local intraday volatility and expressed relative to an ordinary weeknight, for the largest constituents of each market: 30 Saudi, 58 UAE and 126 Israeli shares, sixteen of which are also listed in New York or London.
+
+Two results are clear. First, calendar time is rejected in every market and under every calendar: a weekend carries 1.2 to 2.5 times the variance of a weeknight, against 3.4 to 4.1 under calendar time. Second, the US session matters on weeknights. A weeknight without a US session carries about 30 per cent less variance than one with a session for Saudi and UAE shares, under both Saudi calendars and on US holidays in the UAE; for Israeli shares with a US listing it carries about half as much, and for Israeli shares without one no detectably less.
+
+The weekend is harder. The test we specified in advance compares the weekend ratio before and after each switch. Combined over the four estimates from the three switches, the ratio fell by 7 per cent with a standard error of 9, which separates neither the trading-time prediction, a fall of about 16 per cent, nor no change. The test is weak because a mean of squared gaps is dominated by a few very large gaps. Saudi Arabia is the one switch in which the first session after the weekend did not move to a day on which world markets reopen: it moved from Saturday to Sunday, and both are days of global closure. There the weekend ratio of close-to-close returns, which counts the first session with the closure, fell by 24 to 28 per cent (log changes of $-0.27$ and $-0.33$, standard errors 0.14 and 0.18), and the gap at the open fell by 18 per cent on a scale less sensitive to the largest gaps. In the UAE and Israel the first session after the weekend moved from Sunday to Monday, when Western markets reopen; the gap at the open fell in the UAE and for dual-listed Israeli shares on that scale, but the variance of the first session rose, and over the gap and the session together the weekend ratio did not change. Information appears to have moved from the weekend gap into the Monday session.
+
+The weeknight comparisons have precedents. US holidays have been used to measure the dependence of other markets on New York: \citet{TannousZhang2008} study Canadian cross-listed shares on US partial holidays, \citet{DoddFrijns2018} the trading of cross-listed shares in 36 home markets when the NYSE is closed, and \citet{Bao2023} price transmission between A- and H-shares across asymmetric holidays; \citet{Barclay1990} and \citet{Hiraki1994} study the end of Saturday trading in Tokyo. To our knowledge, no study has used a change of the whole trading week, which holds the calendar length of the weekend fixed while moving a foreign session out of it. \citet{Alsayari2022} study the Saudi switch of 2013 through day-of-week means and a GARCH model of close-to-close returns, without reference to the content of closures; the day-of-week literature on Gulf markets \citep{Ariss2011,Shehadeh2023} does not separate closure from session returns; and the only study of the Tel Aviv switch, by the Israel Securities Authority \citep{ISA2026}, concerns volume and foreign participation. Our results connect the literature on non-trading periods \citep{OldfieldRogalski1980,Ito1998,JonesKaulLipson1994,HongWang2000} with that on transmission between markets \citep{Hamao1990,Lin1994} and between listings of the same firm \citep{Hauser1998,Qadan2012}. They also document two problems of measurement that bear on the literature on calendar anomalies \citep{French1980,LakonishokSmidt1988,Connolly1989,Schwert2003}: the opening values of two of the three Gulf indices distributed by a leading vendor are mostly copies of the previous close, and a widely used free source omits whole weekdays of markets with a non-standard week, extending the warning of \citet{InceP2006}.
+
+\section{Three changes of trading week}\label{sec:setting}
+
+\subsection{The switches}
+\emph{Saudi Arabia.} Until June 2013 the kingdom's weekend was Thursday and Friday and Tadawul traded from Saturday to Wednesday. The weekend moved to Friday and Saturday by royal decree, and the exchange's last Saturday--Wednesday week ended on Wednesday 26 June 2013; the first Sunday--Thursday session was on 30 June \citep{Alsayari2022}. Sessions ran from 11:00 to 15:30 Riyadh time (UTC+3) in our sample, so the NYSE, which opens at 16:30 or 17:30 Riyadh time, never overlapped them. Foreign investors could hold Saudi shares only through swaps until June 2015.
+
+\emph{United Arab Emirates.} The federal government moved the weekend from Friday--Saturday to Saturday--Sunday from January 2022, and both exchanges moved with it: the last Sunday--Thursday week ended on Thursday 30 December 2021, and Monday--Friday trading, from 10:00 to 15:00 Dubai time (UTC+4), began on 3 January 2022 \citep{National2021}. Before the switch sessions ended at about 14:00. Foreign investors account for about half of DFM trading.
+
+\emph{Israel.} The TASE moved from Sunday--Thursday to Monday--Friday on 5 January 2026, while the national weekend remained Friday--Saturday \citep{TASE2025}. Monday--Thursday sessions close at about 17:25 Israel time, the new Friday session at 13:45, and the old Sunday session closed at about 15:50 from March 2020 \citep{WFE2020}. The NYSE opens at 16:30 Israel time, so an Israeli weeknight contains 0.81 of a US session. Unlike the Gulf switches, the Israeli one moved Sunday, an ordinary working day in Israel, into the weekend closure.
+
+Table~\ref{tab:calendar} lists the closure types in each market and period. For consecutive sessions we record the calendar hours $H$ of the closure between them and $U$, the number of NYSE regular sessions inside it (the share of each session's hours that falls inside, NYSE early closes counted at their length). Closures are ordinary weeknights (N: no intervening day, a US session inside), weeknights without a US session (Z), weekends (W: the intervening days are exactly the market's weekend), or other (holidays, the transition, and nights with a US early close), which we set aside. In the Gulf a weekend lasts 67--68 hours in every regime and loses one US session at the switch; a weeknight lasts 19--20 hours.
+
+\begin{table}[t]
+\centering
+\begin{threeparttable}
+\caption{Closure types by market and calendar}\label{tab:calendar}
+\footnotesize\setlength{\tabcolsep}{2.4pt}
+\begin{tabular}{llrrrrrrrrr}
+\toprule
+ & & \multicolumn{3}{c}{Weeknight (N)} & \multicolumn{3}{c}{Weeknight, no US (Z)} & \multicolumn{3}{c}{Weekend (W)} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}\cmidrule(lr){9-11}
+ & & $n$ & $H$ & $U$ & $n$ & $H$ & $U$ & $n$ & $H$ & $U$ \\
+\midrule
+\tabinput ../output/tables/t_calendar.tex
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item $n$: number of closures in the primary window (Saudi Arabia 1 July 2009 -- 30 June 2017; UAE 2 January 2018 -- 25 September 2026). $H$: mean calendar hours. $U$: mean number of NYSE regular sessions inside the closure. Weeknights without a US session are Saturday and Sunday nights in Saudi Arabia before the switch, Sunday nights after it and in the UAE before 2022, Sunday nights in Israel before 2026, and weeknights on which the NYSE was closed. After the UAE switch they are US holidays only. For Tel Aviv the values are for share-gaps from March 2020 (\ref{app:tase}).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\subsection{Data}
+Gulf data are daily opening, high, low and closing prices and volumes from LSEG Workspace. We first checked the vendor's session calendars and index values against official records. For the TA-125, whose official record we hold, the vendor's dates coincide with the exchange's, and its closes agree to within 0.01 per cent on all but nine of 5,329 sessions; its openings differ from the official ones by more than 0.01 per cent on up to 21 per cent of sessions a year, which is one reason we use the official record for Israel. The Gulf index openings are another matter. For the Tadawul All Share Index the recorded open equals the previous close on 98--100 per cent of sessions from 2007 to 2020; for the DFM General Index it does so on 22--40 per cent of sessions in every year since 2007; for the FTSE ADX General Index on 93--100 per cent of sessions since 2022. A gap return computed from these values is zero by construction. The plan anticipated this possibility and specified that index results would then be relegated to an appendix; all Gulf results below are for shares.
+
+The share sample follows a rule fixed in the plan: in each market, the 30 largest firms by market capitalisation at the end of the primary window whose price history covers the whole window. The DFM index has 41 constituents, of which 28 qualify; the ADX and Tadawul supply 30 each. Using firms listed at the end of the window introduces survivorship, which should matter little for a ratio of variances between closure types of the same firms.
+
+For share $i$ on session $t$ the gap return is $g_{it}=\log(O_{it}/C_{i,t-1})$ and the intraday return $d_{it}=\log(C_{it}/O_{it})$. A gap is used only if the previous row of the share is the previous session of the exchange, if volume is positive, and unless the open equals the previous close on a day of very low volume, which indicates an opening without trades. Volatility changed greatly over both samples, so each squared gap is normalised by local intraday variance,
+\[
+z_{it}^2=g_{it}^2/\hat\sigma_{it}^2,\qquad \hat\sigma_{it}^2=\tfrac1{22}\textstyle\sum_{s=1}^{22} d_{i,t-s}^2 ,
+\]
+and winsorised at the 99.9th percentile of the market's pooled distribution. For a closure type $k$ in a given market and calendar, $R_k=\E[z^2\mid k]/\E[z^2\mid N]$ is its variance relative to an ordinary weeknight. Israeli share data are the official end-of-day records of the TASE for the 126 TA-125 constituents, from March 2020, with gap returns measured from the exchange's base price, the previous close adjusted for corporate actions; the plan for Israel did not winsorise (\ref{app:tase}).
+
+The primary windows are 1 July 2009 -- 30 June 2017 for Saudi Arabia (four years either side of the switch) and 2 January 2018 -- 25 September 2026 for the UAE (four years before, all available after). They contain 57,919 Saudi and 89,428 UAE share-gaps of types N, Z and W.
+
+
+\section{Hypotheses and inference}\label{sec:hyp}
+
+Two benchmark hypotheses make sharp predictions. Under \emph{calendar time}, closure variance is proportional to $H$, so that $R_W\approx H_W/H_N$, about 3.4--3.5 in the Gulf and 3.9--4.1 in Israel, and $R_Z\approx1$. Under \emph{foreign trading time}, variance grows with $U$, so that $R_Z<1$ and the weekend ratio falls when the weekend loses a US session. The plan for the Gulf \citep{PAP2} specified two primary tests for each market:
+\begin{itemize}
+\item[H1] $\Delta\log R_W=\log R_W^{\,after}-\log R_W^{\,before}<0$, one-sided at 5 per cent (calendar time predicts a value near zero);
+\item[H2] $\log R_Z<0$ in every calendar that has Z closures.
+\end{itemize}
+It also specified median-based ratios as a secondary statistic, a pooled model across the switches, and a joint Wald test of the calendar-time restrictions $R_k=H_k/H_N$ for every weekend and Z cell. The Israeli analysis follows its own plan \citep{PAP1}, which specified index-level tests and a share-level comparison of the weekend before and after the switch; the Israeli Sunday-night contrast between dual-listed and domestic shares was not among its tests.
+
+Means of $z^2$ by cell are estimated by regressing $z^2$ on cell indicators, with standard errors clustered two ways \citep{Cameron2011}: by calendar week, a Saturday-to-Friday block common to all markets, and by firm. All markets are stacked in one regression, so that combinations across switches and joint tests use the joint covariance matrix and allow for shocks common to the markets in a given week. Ratios and their log differences follow by the delta method.
+
+The plan for the Gulf was written after the vendor's calendars and index openings had been checked, but before any gap variance had been computed, and its hash was recorded then. Neither plan is held by a public registry, so the hashes establish the text but not the time. Every analysis not named in a plan---the Israeli dual-listing contrast, the scales other than the mean and the median, the close-to-close measure, and the robustness checks marked in the tables---was decided after the primary results were known and is exploratory; it is listed, with its hash, in two addenda \citep{PAP3,PAP4}.
+
+\section{Results}\label{sec:results}
+
+\begin{table}[t]
+\centering
+\begin{threeparttable}
+\caption{Closure variance relative to an ordinary weeknight, and the change at the switch}\label{tab:ratios}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccccccr}
+\toprule
+ & \multicolumn{2}{c}{Before the switch} & \multicolumn{2}{c}{After the switch} & \multicolumn{2}{c}{$\Delta\log R_W$} & \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+ & $R_Z$ & $R_W$ & $R_Z$ & $R_W$ & observed & calendar & firms \\
+\midrule
+\tabinput ../output/tables/t_ratios.tex
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item $R_Z$ and $R_W$: mean normalised squared gap on weeknights without a US session and on weekends, relative to ordinary weeknights of the same market and calendar. Standard errors of $\log R$ (and of $\Delta\log R_W$) in parentheses, clustered by calendar week and firm. ``Calendar'' is the change predicted if variance is proportional to calendar hours. After the UAE switch, Z closures are US holidays only; after the Israeli switch there are none. The combined estimate weights the four estimates from the three switches (Israeli domestic and dual-listed shares separately) by inverse variance, with standard error from their joint covariance.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{../output/figures/fig_ratios.pdf}
+\caption{Closure variance relative to an ordinary weeknight, with 95 per cent intervals (two-way clustered). Blue: weekend closures; orange: weeknight closures that contain no US session. Black ticks: the weekend ratio implied by calendar time.}
+\label{fig:ratios}
+\end{figure}
+
+
+\subsection{Calendar time}
+Table~\ref{tab:ratios} and Figure~\ref{fig:ratios} contain the main facts. In no market and under no calendar is the weekend ratio near its calendar-time value. It is 1.32 and 1.23 in the UAE, against 3.40 and 3.53; 2.13 and 2.03 in Saudi Arabia, against 3.46; 1.80 and 1.83 for domestic Israeli shares and 2.48 and 2.18 for dual-listed ones, against 3.9 and 4.1. The joint test of the calendar-time restrictions over all weekend and Z cells gives $\chi^2(14)=386$ ($p<10^{-10}$), and 318 on the Gulf cells alone. The conclusion of \citet{FrenchRoll1986} thus holds in three further markets and for closures whose length is fixed across a change of calendar. It holds on every other scale we use as well (\ref{app:scales}).
+
+\subsection{Weeknights without a US session}
+The Saudi calendar is the cleanest case, because it contains Z closures under both regimes. Under the old calendar, Saturday and Sunday nights carried 0.72 of the variance of a Monday or Tuesday night (standard error of the log ratio 0.12, one-sided $p=0.003$); under the new one, Sunday nights carried 0.74 (0.10, $p=0.001$). The Saturday night, during which no major Western or Asian market trades, has a ratio of 0.68 and the Sunday night, during which US index futures reopen and Asian markets trade on Monday morning, 0.73; the difference in logs is $-0.07$ (0.08). There is no first-night-of-the-week effect behind the contrast: the Saturday night is the first of the Saudi week and has the lower ratio, and in the UAE after 2022 the Monday night, the first of the week, has a ratio of 0.99 to all ordinary weeknights. In the UAE after 2022, weeknights on which the NYSE was closed for a holiday carry 0.70 of ordinary weeknight variance (0.09, $p<0.001$); the figure is 0.72 when the Christmas and New Year fortnight, a lull everywhere, is excluded, and 0.69 for US Monday holidays alone, on which London trades.
+
+In Israel the contrast is between two groups of shares under the same calendar, and it is exploratory. For the sixteen TA-125 constituents with a US or London listing, the Sunday-night ratio is 0.53; for the 110 domestic constituents it is 1.08; conditional on a non-zero gap, 0.61 and 1.14. The difference survives clustering by firm and randomisation inference over firms, in which reassigning the dual-listed label at random 4,999 times never produces a contrast as large as the observed one, and it is present in eleven of the fifteen dual-listed firms with data before the switch (\ref{app:tase}). On this measure the trading of the foreign listing accounts for about half of a dual-listed share's weeknight gap variance.
+
+Read as the contribution of a US session, $\delta=1-R_Z$, these contrasts give 0.28 (0.09) in Saudi Arabia, 0.30 (0.06) in the UAE, 0.47 (0.12) for dual-listed and $-0.08$ (0.12) for domestic Israeli shares. For Gulf shares the US session supplies about 30 per cent of a weeknight's variance; for domestic Israeli shares there is no detectable contribution, although the estimate does not exclude one of the Gulf size. The ordering is the same on scales less sensitive to large gaps (\ref{app:scales}), where the Gulf contributions are smaller (0.17--0.29) and that of dual-listed Israeli shares larger (0.63).
+
+One cell contradicts H2. Before 2022 the UAE Sunday night, which contained no US session, carried 1.18 times the mean variance of an ordinary weeknight (0.08), in both exchanges (DFM 1.11, ADX 1.24). Sunday sessions were thinner---median volume 0.76 of the firm's median, against 1.00--1.11 on other days---but the Sunday night's variance does not decline with Sunday volume, gaps after Sunday sessions reverse the preceding move less rather than more, and building the denominator without Sunday sessions leaves the ratio at 1.20. On scales less sensitive to large gaps the ratio is 0.98--1.02, so the excess comes from a small number of large Sunday-night gaps. The US holiday nights of the same market after 2022 behave as the hypothesis predicts.
+
+\subsection{The weekend: the pre-specified test}
+The trading-time hypothesis predicts that each weekend ratio falls at the switch. The point estimates are negative in three of the four cases and none is significant (Table~\ref{tab:ratios}, Figure~\ref{fig:switch}): $-0.05$ (0.22) in Saudi Arabia, $-0.07$ (0.13) in the UAE, $+0.01$ (0.24) for domestic and $-0.13$ (0.20) for dual-listed Israeli shares. Combined with inverse-variance weights and the joint covariance, the change is $-0.07$ with a standard error of 0.09, a 95 per cent interval of $[-0.25, 0.12]$. H1 is not supported in any market.
+
+The test is weak. The minimum detectable log change, at 5 per cent and power 0.8, is about 0.62 in Saudi Arabia, 0.37 in the UAE, 0.67 and 0.55 for domestic and dual-listed Israeli shares, and 0.26 combined. If a US session added to the weekend what it adds to a weeknight in the same market, the weekend ratio should have fallen by $\delta\,\Delta U$ weeknight units, implying log changes of $-0.14$, $-0.25$, $+0.04$ and $-0.18$, and $-0.17$ combined (diamonds in Figure~\ref{fig:switch}). Every prediction lies within the corresponding interval, and so does zero: on this scale the switches cannot tell the two hypotheses apart. The reason is the tail. In every market and calendar the largest one per cent of share-gaps supply between 20 and 39 per cent of the sum of $z^2$, so that the mean is governed by a few dozen weekends. The estimates are stable across the robustness checks in Table~\ref{tab:robust}, within $[-0.11, 0.17]$; without winsorisation the UAE standard error quadruples, because a few Abu Dhabi gaps follow sessions with almost no intraday movement and have very large normalised values.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.95\textwidth]{../output/figures/fig_switch.pdf}
+\caption{Change in the log weekend ratio at each switch, with 95 per cent intervals. Diamonds give the change implied if a US session contributed as much to the weekend as the weeknight contrast of the same market implies (exploratory); ticks give the calendar-time prediction.}
+\label{fig:switch}
+\end{figure}
+
+
+
+\begin{table}[t]
+\centering
+\begin{threeparttable}
+\caption{Robustness of the Gulf estimates}\label{tab:robust}
+\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{3}{c}{UAE} & \multicolumn{3}{c}{Saudi Arabia} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+ & $R_Z$ before & $R_Z$ after & $\Delta\log R_W$ & $R_Z$ before & $R_Z$ after & $\Delta\log R_W$ \\
+\midrule
+\tabinput ../output/tables/t_robust.tex
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item Rows above the line were specified in the plan; rows marked $\dagger$ are exploratory (Addendum B). Where a row names two variants, the first applies to the UAE and the second to Saudi Arabia: the UAE window without 23 February -- 30 June 2020 or a symmetric window of 3 years 9 months either side; Saudi windows of two or five years either side. ``Scale without Sundays'' builds the UAE denominator from non-Sunday sessions; ``no limit gaps'' drops Saudi gaps of 9.5 per cent or more. Standard errors of $\Delta\log R_W$ in parentheses, clustered by trading week and firm.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+
+\subsection{The weekend: the open, the first session, and the tail}\label{sec:robust}
+Two further measurements address the weakness of the pre-specified test. Both are exploratory. The first replaces the mean of $z^2$ by the mean of $|z|$, $R_k=(\E|z|_k/\E|z|_N)^2$, which gives most weight to the body of the distribution and, unlike the median, keeps the zero gaps---about half of domestic Israeli gaps, a quarter of dual-listed ones and a fifth to a third of Gulf ones---so that it suffers from no selection. The second measures the weekend from the last close before it to the first close after it, $c_t=\log(C_t/C_{t-1})$, normalised by the local mean of $c^2$, so that information priced during the first session after a closure is counted with the closure. It answers a question the gap cannot: after the UAE and Israeli switches the first session after the weekend is a Monday, when Western markets reopen, rather than a Sunday, when they are shut, and weekend information may be priced during that session rather than at its open. The intraday variance of the Israeli index on Mondays after the switch is 1.4 to 2.1 times that of Tuesday to Thursday (\ref{app:tase}). Saudi Arabia is free of this problem: its first post-weekend session moved from Saturday to Sunday, and world markets are shut on both days.
+
+Table~\ref{tab:weekend} gives the results. For the gap at the open, the $|z|$ scale shows falls in the UAE ($-0.12$, 0.10), Saudi Arabia ($-0.20$, 0.17) and for dual-listed Israeli shares ($-0.31$, 0.20), none for domestic Israeli shares ($-0.02$, 0.26), and $-0.15$ (0.07) combined; the predictions implied by the weeknight contrasts on the same scale are $-0.13$, $-0.12$, $-0.22$ and $-0.01$. Close to close, the picture divides as the timing of the first session would lead one to expect. In Saudi Arabia the weekend ratio fell on both scales ($-0.33$, standard error 0.18, and $-0.27$, 0.14; one-sided $p$-values 0.03 and 0.03), and it did so both before and after the opening to qualified foreign investors in June 2015 ($-0.37$ (0.20) and $-0.28$ (0.17) for the post-switch years to June 2015, $-0.29$ (0.19) and $-0.26$ (0.16) for the years after). In the UAE it did not change ($-0.02$ and $0.00$), and for Israeli shares it rose ($+0.18$ and $+0.10$ on the mean scale, $+0.20$ and $+0.13$ on the $|z|$ scale, none significant). The Israeli rise has a second possible source: the switch moved Sunday, a working day in Israel, into the weekend closure, which by itself would add local news to the Friday-to-Monday return. In the UAE and Israel, then, the fall of the weekend gap is matched by a rise in the variance of the Monday session: the switch moved weekend information from the open into the first session, and the combination of the two did not shrink. Only the Saudi switch, where no such relocation was possible, shows the weekend losing variance when it lost a US session, and it does so by at least what the Saudi weeknight contrast predicts.
+
+\begin{table}[t]
+\centering
+\begin{threeparttable}
+\caption{The weekend at each switch: gap at the open and close-to-close}\label{tab:weekend}
+\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccccccccc}
+\toprule
+ & \multicolumn{5}{c}{Gap at the open} & \multicolumn{4}{c}{Close to close} \\
+\cmidrule(lr){2-6}\cmidrule(lr){7-10}
+ & \multicolumn{2}{c}{mean $z^2$} & \multicolumn{2}{c}{mean $|z|$} & pred. & \multicolumn{2}{c}{mean $c^2$} & \multicolumn{2}{c}{mean $|c|$} \\
+\midrule
+\tabinput ../output/tables/t_cc.tex
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item Change in the log weekend ratio at the switch, with standard errors clustered by calendar week and firm, from one stacked regression per column. ``Mean $z^2$'' is the pre-specified statistic (Table~\ref{tab:ratios}). ``Mean $|z|$'': $R_k=(\E|z|_k/\E|z|_N)^2$ on all gaps; ``pred.'' is the change implied if a US session contributed to the weekend what it contributes to a weeknight on this scale. Close to close: returns from the last close before the closure to the first close after it, normalised by the mean squared close-to-close return of the 22 previous sessions and winsorised at the 99.9th percentile. Exploratory except the first column: the $|z|$ scale and the close-to-close measure were adopted after the primary results were known (Section~\ref{sec:hyp}). ``Combined'' pools the four estimates from the three switches (Israeli domestic and dual-listed shares separately).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+The medians specified in the plan as a secondary statistic, and a logarithmic scale on non-zero gaps, point the same way as the $|z|$ scale for the gap (\ref{app:scales}); both depend on which gaps are non-zero, and the share of zero gaps among Israeli weekend gaps fell after the switch (from 0.48 to 0.41 for domestic shares), so their Israeli estimates are partly a matter of selection. Whether the largest gaps themselves respond to the switches cannot be told from these samples: the frequency of weekend gaps above the market's pre-switch 99th percentile, relative to weeknights, changes by between $-0.26$ and $+0.33$ in log terms with standard errors of 0.3 to 0.7.
+
+\subsection{Other changes around the switches}
+Session hours changed at the UAE switch (the close moved from 14:00 to 15:00) and in Saudi Arabia in April 2016 (from 11:00--15:30 to 10:00--15:00; \citealp{Mubasher2016}; \ref{app:hours}); both affect every closure of the regime alike, and every US session remained inside a closure. Splitting the Saudi post-period at the opening to qualified foreign investors in June 2015 gives weekend changes of $-0.12$ (0.30) and $+0.02$ (0.25) on the mean scale. Excluding the weeks of the Hamas attack of October 2023 and of the Iran--Israel strikes of April 2024 and June 2025 moves the combined mean-scale change to $-0.04$ (0.10). The Israeli switch also moved Sunday, a working day in Israel, into the weekend closure, and changed who trades on the new Friday session \citep{ISA2026}. Survivorship from selecting firms listed at the end of each window remains; it affects both closure types of the same firms alike, but we cannot rule out that it favours firms whose foreign ownership grew.
+
+\section{Interpretation}\label{sec:interp}
+
+The first result is the one \citet{FrenchRoll1986} explained by trading-generated information, and the switches give no reason to revise it: a weekend is priced as a little more than one closure, not as three days. The second shows that the trading which generates information need not be local. For shares with a foreign listing, and to a lesser degree for shares priced off global benchmarks, the foreign session reveals information that reaches the domestic price at the next open, and when the foreign market is closed the overnight gap is correspondingly quieter. One possible reason why Gulf shares depend on New York while domestic Israeli shares do not is that Gulf prices move with oil and global risk appetite, which the US session reveals, while the domestic firms in the TA-125 are exposed chiefly to local conditions; we have not tested it.
+
+At the weekend the evidence is weaker but consistent with the same picture. Where the switch changed only the foreign trading inside the weekend---Saudi Arabia---the weekend lost about as much variance as the weeknight contrasts imply a US session carries. Where it also moved the first post-weekend session to the day world markets reopen, the weekend gap shrank but the first session grew, and the calendar of the first session, rather than the foreign session removed from the closure, governed the total. Two cautions apply. The Saudi evidence rests on one switch and is significant only at the 5 per cent level on exploratory measures; and on every scale the foreign session accounts for a minority of what a weekend adds, so that most weekend variance is an increment attached to the closure that none of the switches moved.
+
+\section{Notes on measurement}\label{sec:measure}
+
+Two problems encountered in this study affect any analysis of markets with a non-standard week. The first is stale index openings. A study of overnight or weekend returns that used the opening values of the Tadawul or ADX indices from the vendor we used would find gap returns of zero on most days, and for the DFM index on a quarter to two fifths of days (\ref{app:index}); the open of an index should be checked against the previous close before it is used. The second is missing sessions. The daily TA-125 series distributed by Yahoo Finance contains no Sunday session before 2026, so that its Monday return spans two sessions and a weekend and its Monday variance is 2.8 times the official Tuesday variance; the same source records no Friday session for a large Dubai share after 2022 (\ref{app:vendor}).
+
+\section{Conclusion}\label{sec:conc}
+
+Three exchanges moved their trading week while keeping the length of the weekend closure, and each move took one US trading session out of the weekend. Calendar time is rejected in all of them. On weeknights the absence of a US session lowers gap variance by about 30 per cent for Gulf shares and by half for Israeli shares listed in New York, and not at all for Israeli shares without a foreign listing. At the weekend the pre-specified test cannot separate the trading-time prediction from no change, because a mean of squares is governed by a few very large gaps. Exploratory measures suggest that the weekend lost variance where only its foreign content changed, and that elsewhere the information moved into the first session after the weekend. The Israeli post-switch sample, now 34 weekends, will be four times as large by the end of 2028; the next test should be registered on the close-to-close measure and on a scale that down-weights the tail, and the code reproduces every table as the sample grows.

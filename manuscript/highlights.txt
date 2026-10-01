@@ -1,0 +1,6 @@
+Highlights
+- Three trading-week switches moved a US session out of a fixed-length weekend
+- Calendar time rejected: weekends carry 1.2-2.5 weeknights of variance, not 3.4-4.1
+- Weeknights without a US session carry about 30% less variance for Gulf shares
+- Pre-specified weekend test cannot separate trading time from no change
+- Where only foreign content changed (Saudi), weekend variance fell as predicted
